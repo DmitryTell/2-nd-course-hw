@@ -80,6 +80,12 @@ body {
   color: #FFFFFF;
   display: flex;
   align-items: end;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.main__game-card:hover {
+  border: 3px solid #44D2FF;
+  transform: scale(1.05);
 }
 .main .card-1 {
   background: url(../img/block-bg-1.jpg) center/cover no-repeat;
