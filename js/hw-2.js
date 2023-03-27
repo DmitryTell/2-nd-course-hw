@@ -72,4 +72,4 @@ delete user['city of residence'];
 //Задание 10
 let yourName = prompt('Ваше имя');
 
-alert(`Привет, ${yourName}`);
+// alert(`Привет, ${yourName}`);
