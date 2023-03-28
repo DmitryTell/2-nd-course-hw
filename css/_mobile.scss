@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: calc(50% - (343px / 2));
+        padding-right: calc(50% - (343px / 2));
+    }
+
+    .header {
+        min-height: 735px;
+        padding-top: 0;
+        grid-template-columns: repeat(4, 1fr);
+        align-content: center;
+
+        &__content {
+            grid-column: span 4;
+            align-items: center;
+        }
+        .content {
+            &__title {
+                font-size: 32px;
+                line-height: 39px;
+                text-align: center;
+            }
+
+            &__text {
+               margin-bottom: 32px;
+               font-size: 14px;
+               line-height: 22px;
+               text-align: center;
+            }
+        }
+    }
+
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
