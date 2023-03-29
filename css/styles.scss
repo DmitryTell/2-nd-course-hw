@@ -24,6 +24,8 @@ body {
 
     &__content {
         grid-column: span 8;
+        display: flex;
+        flex-direction: column;
     }
     .content {
         &__title {
@@ -68,11 +70,11 @@ body {
 }
 
 .main {
-    min-height: 556px;
+    padding-top: 128px;
+    padding-bottom: 128px;
     background: #000915;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    align-items: center;
     gap: 32px;
 
     &__game-card {
@@ -106,3 +108,23 @@ body {
         background: url(../img/block-bg-3.jpg) center/cover no-repeat;
     }
 }
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .main {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@import "mobile";
