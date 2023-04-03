@@ -33,4 +33,18 @@
     .main {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .game-times-of-year {
+        .content {
+            &__title {
+                font-size: 32px;
+                line-height: 39px;
+            }
+
+            &__text {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
 }
