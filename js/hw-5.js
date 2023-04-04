@@ -87,3 +87,21 @@ console.log(circle1.area());
 console.log(circle1.perimeter());
 console.log(circle2.area());
 console.log(circle2.perimeter());
+
+function playTimesOfYear() {
+    let monthNumber = prompt('Введите номер месяца');
+
+    if (monthNumber === null || monthNumber === '') {
+        console.log('Игра отменена или введено пустое значение');
+    } else if (monthNumber == 12 || monthNumber == 1 || monthNumber == 2) {
+        alert('Зима');
+    } else if (monthNumber > 2 && monthNumber < 6) {
+        alert('Весна');
+    } else if (monthNumber > 5 && monthNumber < 9) {
+        alert('Лето');
+    } else if (monthNumber > 8 && monthNumber < 12) {
+        alert('Осень');
+    } else {
+        alert('Вы ввели некорректное значение');
+    }
+}
