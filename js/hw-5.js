@@ -92,7 +92,7 @@ function playTimesOfYear() {
     let monthNumber = prompt('Введите номер месяца');
 
     if (monthNumber === null || monthNumber === '') {
-        console.log('Игра отменена или введено пустое значение');
+        alert('Игра отменена или введено пустое значение');
     } else if (monthNumber == 12 || monthNumber == 1 || monthNumber == 2) {
         alert('Зима');
     } else if (monthNumber > 2 && monthNumber < 6) {
