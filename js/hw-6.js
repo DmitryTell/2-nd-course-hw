@@ -102,7 +102,7 @@ console.log([1, -2, 3, 5, -7, 8, -1, 0].filter(elem => elem < 0));
 const arr = [];
 
 const getRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + 1) + min;
+    return Math.round(Math.random() * (max - min)) + min;
 }
 
 for (let i = 0; i < 10; i++) {
