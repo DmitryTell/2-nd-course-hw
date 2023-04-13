@@ -76,7 +76,34 @@ currentDate.setDate(currentDate.getDate() + 73);
 console.log(currentDate);
 
 //10
-const getDateEdited = (date) => {
-    let dateTime = [date.getFullYear(), date.getMonth(), date.getDate(), date.getDay(), date.getHour(), date.getMinutes(), date.getSeconds()];
-    let [year, month, dayInMonth, dayInWeek, hours, minutes, seconds] = dateTime;
+const getZeroBefore = (num) => String(num).length < 2 ? '0' + num : num;
+const getDate = (year, month, day, hours, minutes, seconds) => {
+    let date = new Date(year, month - 1, day, hours, minutes, seconds);
+    let months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    let weekDays = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+
+    return `Дата: ${getZeroBefore(date.getDate())} ${months[date.getMonth()]} ${date.getFullYear()} - это ${weekDays[date.getDay()]}\nВремя: ${getZeroBefore(date.getHours())}:${getZeroBefore(date.getMinutes())}:${getZeroBefore(date.getSeconds())}`;
+}
+
+console.log(getDate(2015, 3, 24, 1, 0, 5));
+
+//11
+function playGuessWords() {
+    let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    fruits = fruits.sort(() => Math.random() - 0.5);
+
+    alert(fruits);
+
+    let firstAnswer = prompt('Назовите первое слово');
+    let secondAnswer = prompt('Назовите последнее слово');
+    let checkFirst = new RegExp('^' + firstAnswer, 'i');
+    let checkSecond = new RegExp('^' + secondAnswer, 'i');
+
+    if (checkFirst.test(fruits[0]) && checkSecond.test(fruits[fruits.length - 1])) {
+        alert('Поздравляю! Вы угадали!');
+    } else if (checkFirst.test(fruits[0]) || checkSecond.test(fruits[fruits.length - 1])) {
+        alert('Вы были близки к победе!');
+    } else {
+        alert('Вы ответили неверно!');
+    }
 }

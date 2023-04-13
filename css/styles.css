@@ -99,7 +99,7 @@ body {
   background: url(../img/block-bg-3.jpg) center/cover no-repeat;
 }
 
-.game-times-of-year {
+.game-times-of-year, .game-guess-words {
   min-height: 800px;
   background: #000915;
   display: grid;
@@ -108,26 +108,26 @@ body {
   align-content: center;
   align-items: center;
 }
-.game-times-of-year__content {
+.game-times-of-year__content, .game-guess-words__content {
   grid-column: span 6;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 32px;
 }
-.game-times-of-year .content__title {
+.game-times-of-year .content__title, .game-guess-words .content__title {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
   color: #FFFFFF;
 }
-.game-times-of-year .content__text {
+.game-times-of-year .content__text, .game-guess-words .content__text {
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
   color: #FFFFFF;
 }
-.game-times-of-year .content__button {
+.game-times-of-year .content__button, .game-guess-words .content__button {
   width: 234px;
   height: 49px;
   background: #9C0332;
@@ -140,12 +140,19 @@ body {
   cursor: pointer;
   transition: background 0.3s;
 }
-.game-times-of-year .content__button:hover {
+.game-times-of-year .content__button:hover, .game-guess-words .content__button:hover {
   background: #EB443F;
 }
-.game-times-of-year__img {
+.game-times-of-year__img, .game-guess-words__img-desktop {
   grid-column: span 6;
   justify-self: end;
+}
+
+.game-guess-words__img-desktop {
+  justify-self: start;
+}
+.game-guess-words__img {
+  display: none;
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -162,19 +169,27 @@ body {
   .main {
     grid-template-columns: repeat(8, 1fr);
   }
-  .game-times-of-year {
+  .game-times-of-year, .game-guess-words {
     grid-template-columns: repeat(4, 1fr);
     row-gap: 64px;
   }
-  .game-times-of-year__content {
+  .game-times-of-year__content, .game-guess-words__content {
     grid-column: span 4;
     justify-self: center;
     align-items: center;
   }
-  .game-times-of-year .content__text {
+  .game-times-of-year .content__text, .game-guess-words .content__text {
     text-align: center;
   }
-  .game-times-of-year__img {
+  .game-times-of-year__img, .game-guess-words__img-desktop {
+    grid-column: span 4;
+    justify-self: center;
+  }
+  .game-guess-words__img-desktop {
+    display: none;
+  }
+  .game-guess-words__img {
+    display: block;
     grid-column: span 4;
     justify-self: center;
   }
@@ -208,11 +223,11 @@ body {
   .main {
     grid-template-columns: repeat(4, 1fr);
   }
-  .game-times-of-year .content__title {
+  .game-times-of-year .content__title, .game-guess-words .content__title {
     font-size: 32px;
     line-height: 39px;
   }
-  .game-times-of-year .content__text {
+  .game-times-of-year .content__text, .game-guess-words .content__text {
     font-size: 14px;
     line-height: 22px;
   }
