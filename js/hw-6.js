@@ -115,11 +115,11 @@ console.log(arr);
 console.log(arrEven);
 
 //15
-const numbers = [];
+// const numbers = [];
 
-for (let i = 0; i < 6; i++) {
-    numbers.push(getRandomNumber(1, 10));
-}
+// for (let i = 0; i < 6; i++) {
+//     numbers.push(getRandomNumber(1, 10));
+// }
 
-console.log(numbers);
-console.log(numbers.reduce((sum, elem) => sum + elem) / numbers.length);
+// console.log(numbers);
+// console.log(numbers.reduce((sum, elem) => sum + elem) / numbers.length);
